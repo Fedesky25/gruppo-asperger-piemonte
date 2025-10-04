@@ -91,10 +91,15 @@ h1 {
 
 h2 {
     font-size: var(--fs-700);
+    margin-bottom: 1em;
 }
 
 h3 {
     font-size: var(--fs-600);
+    margin-bottom: 1em;
+}
+h3:not(:first-child) {
+    margin-top: 1.5em;
 }
 
 a {
@@ -103,8 +108,46 @@ a {
     letter-spacing: 0.05ch;
 }
 
+p {
+    margin-bottom: 1em;
+}
+
+ul,
+ol {
+    padding-left: 3ch;
+    margin-bottom: 1em;
+}
+ul.spaced li + li,
+ol.spaced li + li {
+    margin-top: 0.5em;
+}
+
 .glass {
     backdrop-filter: blur(6px) saturate(180%);
     background-color: #ffffffbf;
     border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+header,
+main {
+    padding: var(--vpp);
+}
+
+section {
+    scroll-margin-block-start: 4rem;
+    position: relative;
+    margin-top: 25vh;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0.5rem;
+    width: calc(var(--vpp) + 4rem);
+    transform: translate(calc(-1 * var(--vpp)), calc(-1 * var(--fs-700)));
+    background-color: rgb(var(--blu));
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }

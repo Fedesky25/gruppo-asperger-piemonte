@@ -1,0 +1,33 @@
+[
+    {
+        "href": "https://www.asperger.it/",
+        "name": "Gruppo Asperger Onlus",
+        "img": "GruppoAspergerOnlus.png"
+    },
+    {
+        "href": "https://www.giuliaparla.it/",
+        "name": "Cooperativa Giuliaparla",
+        "img": "GiuliaParla.png",
+        "background": true
+    },
+    {
+        "href": "http://www.autismopiemonte.org/",
+        "name": "Coordinamento Autismo Piemonte",
+        "img": "CoordinamentoAutismoPiemonte.png"
+    },
+    {
+        "href": "https://www.avfvs.it/",
+        "name": "Amici della Via Francigena Valle di Susa",
+        "img": "avfvs.webp"
+    },
+    {
+        "href": "https://www.viabaltea.it/",
+        "name": "Via Baltea",
+        "img": "ViaBaltea.png"
+    },
+    {
+        "href": "https://www.casadicarita.org/",
+        "name": "Casa di Carità",
+        "img": "CasaDiCarita.svg"
+    }
+]
