@@ -38,6 +38,7 @@
             wrapper.style.gridAutoRows = "0px";
             wrapper.style.paddingBottom = `${Math.max(...offsets)}px`;
         }
+        refresh_request = null;
     }
 
     $effect(() => {
