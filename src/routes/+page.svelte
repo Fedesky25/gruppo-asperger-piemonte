@@ -1,8 +1,9 @@
 <script>
     import donazione from "$lib/assets/5x1000.jpg";
-    import Copyable from "$lib/components/Copyable.svelte";
+    import { Masonry, Copyable, Card } from "$lib";
     import partners from "./partners.json";
     import direttivo from "./direttivo.json";
+    import activities from "./activities.json";
 </script>
 
 <svelte:head>
@@ -65,11 +66,13 @@
             </div>
         </div>
     </section>
-    <section>
-        <h2>Attività</h2>
-    </section>
-    <section>
-        <h2>Attività Passate</h2>
+    <section class="activities">
+        <h2>Attività ed Eventi</h2>
+        <Masonry items={activities}>
+            {#snippet children(a)}
+                <Card {...a} />
+            {/snippet}
+        </Masonry>
     </section>
     <section aria-labelledby="sostieni">
         <h2 id="sostieni">Sostenere il Gruppo</h2>
@@ -169,6 +172,12 @@
     .colored {
         color: rgb(var(--blu));
     }
+
+    .activities {
+        --gap: 1.3rem;
+        --col-width: 42ch;
+    }
+
     .sostieni img {
         display: block;
         width: 100%;
