@@ -44,6 +44,11 @@
                     check(2);
                     result += `<li>${line.slice(2)}</li>`;
                     break;
+                case 62: // >
+                    if (state) result += block_close[state - 1];
+                    result += `<p class="small">${line.slice(1)}</p>`;
+                    state = 0;
+                    break;
                 case 64: {
                     // @
                     if (state) result += block_close[state - 1];
