@@ -170,9 +170,12 @@
         background-color: rgb(var(--giallo));
     }
 
-    .body > :global(:is(p, ol, ul)) {
+    .body > :global(p) {
         margin-top: 1rem;
         margin-bottom: 0rem;
+    }
+    .body > :global(:is(ul, ol)) {
+        margin-top: 0.4rem;
     }
     .body > :global(.actions) {
         margin-top: 1.5rem;
@@ -181,5 +184,9 @@
     }
     .body :global(li::marker) {
         color: rgb(var(--blu));
+    }
+    .body :global(p.small) {
+        font-size: 0.9rem;
+        opacity: 0.9;
     }
 </style>
