@@ -9,8 +9,8 @@
     let { title, subtitle, image, body }: Props = $props();
 
     const link_regexp = /\[([^\[\]]+)\]\(([^\(\)]+)\)/g;
-    const bold_regexp = /\*([^\*]+)\*/g;
-    const emph_regexp = /_([^_]+)_/g;
+    const bold_regexp = /\*([^\*\n<>]+)\*/g;
+    const emph_regexp = /_([^_\n<>]+)_/g;
 
     const block_open = ["<ol>", "<ul>"];
     const block_close = ["</ol>", "</ul>"];
