@@ -129,6 +129,7 @@
         height: auto;
         display: block;
         border-radius: 7px;
+        box-shadow: 0 0 0.7em #4442;
     }
     h3 {
         padding-left: 0.7rem;
