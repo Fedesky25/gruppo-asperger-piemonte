@@ -106,7 +106,7 @@
 
 <div class="card">
     {#if image}
-        <img src={image} alt={title} />
+        <img src={image} alt={title} loading="lazy" />
     {/if}
     <h3>{title}</h3>
     {#if subtitle}
