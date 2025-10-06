@@ -1,9 +1,11 @@
 <script>
     import donazione from "$lib/assets/5x1000.jpg";
-    import { Masonry, Copyable, Card } from "$lib";
+    import { Masonry, Copyable, Card, Field } from "$lib";
     import partners from "./partners.json";
     import direttivo from "./direttivo.json";
     import activities from "./activities.json";
+
+    let privacy_seen = false;
 </script>
 
 <svelte:head>
@@ -18,8 +20,8 @@
     </p>
 </header>
 <main>
-    <section id="conosciamoci" aria-labelledby="conosciamoci-title">
-        <h2 id="conosciamoci-title">Conosciamoci meglio</h2>
+    <section id="conosciamoci">
+        <h2>Conosciamoci meglio</h2>
         <div class="cols">
             <div>
                 <p>
@@ -66,7 +68,7 @@
             </div>
         </div>
     </section>
-    <section class="activities">
+    <section id="attivita" class="activities">
         <h2>Attività ed Eventi</h2>
         <Masonry items={activities}>
             {#snippet children(a)}
@@ -74,8 +76,8 @@
             {/snippet}
         </Masonry>
     </section>
-    <section aria-labelledby="sostieni">
-        <h2 id="sostieni">Sostenere il Gruppo</h2>
+    <section id="sostienici">
+        <h2>Sostenere il Gruppo</h2>
         <div class="sostieni">
             <div>
                 <h3>Perché diventare soci?</h3>
@@ -142,13 +144,63 @@
             />
         </div>
     </section>
-    <section aria-labelledby="partner-title">
-        <h2 id="partner-title">Partner e amici</h2>
+    <section id="contattaci">
+        <h2>Contattaci</h2>
+        <ul class="contacts">
+            <li>
+                Telefonicamente al numero
+                <a href="tel:3279057141">327 905 7141</a> il martedì dalle 10 alle
+                12 o giovedì dalle 14 alle 16;
+            </li>
+            <li>
+                Via mail all'indirizzo
+                <a href="mailto:info@gruppoaspergerpiemonte.it"
+                    >info@gruppoaspergerpiemonte.it</a
+                >;
+            </li>
+            <li>Attraverso il seguente form:</li>
+        </ul>
+        <form action="https://formspree.io/f/xeqnejrv" method="POST">
+            <Field name="nome" autocomplete="name" required />
+            <Field type="email" name="email" autocomplete="email" required />
+            <textarea
+                name="messaggio"
+                cols="30"
+                rows="7"
+                placeholder="Scrivi qui il tuo messaggio..."
+                required
+            ></textarea>
+            <div class="privacy-field">
+                <input type="checkbox" required bind:checked={privacy_seen} />
+                <span
+                    >Ho preso visione della
+                    <a href="docs/privacy-GAP.pdf">informativa privacy</a></span
+                >
+            </div>
+            <button
+                type="submit"
+                class="btn"
+                disabled={!privacy_seen}
+                title={privacy_seen
+                    ? "Invia il messaggio"
+                    : "È necessario prendere visione della privacy"}
+            >
+                Invia messaggio
+            </button>
+        </form>
+        <span id="form-feedback"></span>
+    </section>
+    <section>
+        <h2>Partner e amici</h2>
         <ul class="partners">
             {#each partners as p}
                 <li class:bg={p.background}>
                     <a href={p.href} target="_blank" rel="noreferrer">
-                        <img src="/loghi/{p.img}" alt={p.name} loading="lazy" />
+                        <img
+                            src="/loghi/{p.img}"
+                            alt="Logo de '{p.name}'"
+                            loading="lazy"
+                        />
                     </a>
                 </li>
             {/each}
@@ -159,6 +211,11 @@
 <style>
     header {
         height: 90vh;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 20vh;
+        font-size: clamp(2.3rem, 5vw, 5rem);
     }
     .cols {
         column-width: 60ch;
@@ -193,6 +250,75 @@
             max-width: 120ch;
         }
     }
+
+    .contacts {
+        padding-left: 0;
+        list-style: none;
+    }
+    .contacts li + li {
+        margin-top: 2.4em;
+        position: relative;
+    }
+    .contacts li + li::before {
+        content: "oppure";
+        color: #aaa;
+        position: absolute;
+        top: -1.2em;
+        left: 2.5ch;
+        transform: translateY(-50%);
+    }
+
+    form {
+        margin-top: 1rem;
+    }
+    button {
+        font-size: 1em;
+    }
+    @media (max-width: 110ch) {
+        form > * + * {
+            margin-top: 1.2rem;
+        }
+        form button {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @media (min-width: 110ch) {
+        form {
+            display: grid;
+            grid-template-columns: 32ch 60ch;
+            gap: 1.7em;
+        }
+        form .field {
+            grid-column: 1;
+        }
+        form textarea {
+            grid-row: 1/5;
+            grid-column: 2;
+        }
+        form button {
+            grid-row: 5;
+            grid-column: 2;
+            justify-self: center;
+        }
+        .privacy-field {
+            grid-row: 3;
+            grid-column: 1;
+            align-self: start;
+        }
+    }
+
+    .privacy-field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4em;
+    }
+    .privacy-field input[type="checkbox"] {
+        flex-shrink: 0;
+        margin-right: 2ch;
+    }
+
     .partners {
         padding: 0;
         list-style: none;

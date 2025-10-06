@@ -152,6 +152,40 @@ section::before {
     border-bottom-right-radius: 0.25rem;
 }
 
+textarea,
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.4em var(--h-padding);
+    font-size: inherit;
+    font-weight: 400;
+    color: var(--fg);
+    background-color: #fafafa77;
+    border: 2px solid rgba(var(--blu), 0.5);
+    transition: border-color 0.2s ease;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: rgba(var(--blu), 0.9);
+}
+input[type="checkbox"] {
+    display: inline-block;
+    cursor: pointer;
+}
+textarea {
+    display: block;
+    resize: vertical;
+    padding: 0.4em 0.6em;
+    min-height: 10rem;
+    height: 14rem;
+    max-height: 30rem;
+}
+textarea::placeholder {
+    color: var(--fg-sub);
+}
+
 .btn {
     display: block;
     width: fit-content;
@@ -162,6 +196,8 @@ section::before {
     font-weight: 700;
     letter-spacing: 0.05ch;
     user-select: none;
+    cursor: pointer;
+    background-color: transparent;
     transition:
         background-color 0.2s,
         color 0.2s;
@@ -179,4 +215,58 @@ section::before {
     border-color: #999;
     color: #999;
     cursor: not-allowed;
+}
+
+@supports (appearance: none) or (-webkit-appearance: none) {
+    input[type="checkbox"] {
+        /* Add if not using autoprefixer */
+        -webkit-appearance: none;
+        /* Remove most all native input styles */
+        appearance: none;
+        /* For iOS < 15 */
+        background-color: transparent;
+        /* Not removed via appearance */
+        margin: 0;
+
+        font: inherit;
+        color: currentColor;
+        width: 1.25em;
+        height: 1.25em;
+        border: 0.15em solid currentColor;
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+
+        vertical-align: middle;
+        display: inline-block;
+        position: relative;
+        margin-inline: 0.225em;
+    }
+    input[type="checkbox"]::before {
+        content: "";
+        position: absolute;
+        top: 0.15em;
+        left: 0.15em;
+        width: 0.65em;
+        height: 0.65em;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        transform: scale(0);
+        transform-origin: center;
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em var(--form-control-color);
+        /* Windows High Contrast Mode */
+        background-color: rgb(var(--giallo));
+    }
+    input[type="checkbox"]:checked::before {
+        transform: scale(1);
+    }
+    input[type="checkbox"]:focus {
+        box-shadow: 0 0 0 0.225em #ccc4;
+        outline: none;
+    }
+    input[type="checkbox"]:disabled {
+        --form-control-color: var(--form-control-disabled);
+
+        color: var(--form-control-disabled);
+        cursor: not-allowed;
+    }
 }

@@ -4,5 +4,6 @@ import Masonry from "./components/Masonry.svelte";
 import Copyable from "./components/Copyable.svelte";
 import BackLogo from "./components/BackLogo.svelte";
 import Card from "./components/Card.svelte";
+import Field from "./components/Field.svelte";
 
-export { Masonry, Card, Copyable, BackLogo };
+export { Masonry, Card, Copyable, BackLogo, Field };
