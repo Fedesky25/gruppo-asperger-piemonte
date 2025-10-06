@@ -4,7 +4,7 @@
         "subtitle": null,
         "expire": "2025-03-12",
         "partners": ["add"],
-        "image": "/img/Percorso-affettivita-sessualita.jpg",
+        "image": "/img/percorso-affettivita-sessualita.jpg",
         "body": "In collaborazione con [l’Associazione di Idee](https://lassociazionedidee.it/), il G.A.P. propone ai propri soci un percorso di 10 incontri per favorire la conoscenza della sfera affettiva e sessuale, attraverso la condivisione e il confronto con il gruppo dei pari. I destinatari sono ragazzi e ragazze di età 13-19 anni.\n\nPer maggiori informazioni e/o scheda di iscrizione, potete scrivere, entro mercoledì 12 marzo, a [info​@gruppo​asperger​piemonte.it](mailto:info@gruppoaspergerpiemonte.it) oppure a [lassociazione​didee​@gmail.com](mailto:lassociazionedidee@gmail.com)."
     },
     {
@@ -42,9 +42,113 @@
     {
         "title": "Spettro Autistico e Fenotipo Femminile",
         "subtitle": "Dal mascheramento al riconoscimento",
-        "expire": "2024-09-12",
-        "partners": ["add"],
-        "image": "/img/scuola-e-autismo-banner.jpg",
+        "expire": "2024-11-23",
+        "partners": ["sc"],
+        "image": "/img/spettro_autistico_fenotipo_femminile_2024.jpg",
         "body": "[Presidio Sanitario San Camillo](https://www.sancamillotorino.net/) e Gruppo Asperger Piemonte invitano alla seconda edizione de “Spettro Autistico e Fenotipo Femminile”, corso di formazione rivolto a chiunque sia interessato a comprendere meglio l’autismo femminile. L’autismo femminile è ancora oggi la parte invisibile dello spettro. Spesso i tratti autistici risultano essere meno evidenti rispetto agli uomini o, più frequentemente, si presentano in modo diverso da come ce li aspettiamo. Il corso si propone di:\n+ approfondire e comprendere in profondità il fenotipo femminile e l’esperienza dell’autismo nelle bambine/ragazze/donne,\n+ riconoscerlo dietro il fenomeno del masking e del camouflaging,\n+ comprendere le strategie di coping che vengono adottate per conformarsi alle aspettative sociali,\n+ far luce sul bias di genere nell’epidemiologia dell’ASD e le diverse prevalenze,\n+ scoprire come le differenze di genere influenzano la diagnosi o portano a misdiagnosi.\nModalità di iscrizione: inviare la scheda di iscrizione inserita nel [pieghevole in allegato](https://www.gruppoaspergerpiemonte.it/docs/Spettro_autistico_e_fenotipo_femminile_2024_2ed.pdf) alla [Segreteria Organizzativa](mailto:segreteria.formazione.torino@camilliani.net) del Presidio Sanitario San Camillo, effettuando poi il bonifico della quota di partecipazione (€60) solo a conferma avvenuta.\nDate e modalità di accesso: gli incontri si terranno online Sabato 23 Novembre dalle 8:30 alle 13:00 e Lunedì 25 Novembre dalle 16:00 alle 20:00.\n@[Vedi il pieghevole](/docs/Spettro_autistico_e_fenotipo_femminile_2024_2ed.pdf)"
+    },
+    {
+        "title": "Abi.TO su misura",
+        "subtitle": "L’autonomia abitativa si fa inclusiva",
+        "expire": null,
+        "partners": ["angsa"],
+        "image": "/img/logo-abito.png",
+        "body": "Progetto innovativo di autonomia abitativa che parte proprio dalla persona e dal diritto di scegliere, in questo caso dove e con chi vivere. Abi.TO su misura rappresenta una palestra volta al raggiungimento dell’indipendenza. La parola d’ordine è flessibilità: andare a vivere da soli è un percorso individuale di cui vanno rispettate le tappe sulla base della persona. Questo progetto è frutto della collaborazione di 5 realtà:\n- Gruppo Asperger Piemonte APS\n- ANGSA Torino ODV\n- Cooperativa Sociale Stranaidea\n- Istituto Alfieri Carrù\n- Cooperativa Sociale Andirivieni\n@[Maggiori dettagli](https://www.stranaidea.it/abi-to-su-misura-lautonomia-abitativa-si-fa-inclusiva/)"
+    },
+    {
+        "title": "Asperger e Dintorni",
+        "subtitle": "Sportello di informazione e orientamento",
+        "expire": null,
+        "partners": null,
+        "image": "/img/sportello.png",
+        "body": "Uno sportello di ascolto gratuito aperto a chiunque abbia necessità di informazioni e orientamento. Si effettua su appuntamento scrivendo a [sportello​ascolto​.gap​@gmail​.com](mailto:sportelloascolto.gap@gmail.com).\nLo sportello è stato realizzato col contributo del Consiglio Regionale del Piemonte.\n@[Vedi la locandina](/img/sportello.png)"
+    },
+    {
+        "title": "Aspie Gang 2023-2024",
+        "subtitle": "Autismo, socialità e consapevolezza",
+        "expire": "2023-09-26",
+        "partners": ["cgp", "avfvs"],
+        "image": "/docs/aspie-gang/23-24/immagine.jpeg",
+        "body": " Riparte in nostro progetto di educazione alla socialità e alla consapevolezza, rivolto ad adolescenti e adulti con autismo. Si tratta di incontri di gruppo — due appuntamenti al mese — nei contesti naturali per confrontarsi con gli altri, definire i propri obiettivi sociali e relazionali, e condividere passioni.\nÈ un progetto della [Cooperativa Giuliaparla](https://www.giuliaparla.it/) in collaborazione con Gruppo Asperger Piemonte e il sostegno di [AVFVS](https://www.avfvs.it/). Trovate tutte le informazioni sul flyer. Per iscrizioni o ulteriori informazioni, scrivere a [giuliaparla@gmail.com](mailto:giuliaparla@gmail.com).\n@[Vedi il flyer](https://www.gruppoaspergerpiemonte.it/docs/aspie-gang/23-24/flyer.jpeg)"
+    },
+    {
+        "title": "Percorsi Divergenti",
+        "subtitle": "Prossimità, autismo, comunità",
+        "expire": "2023-04-12",
+        "partners": ["cgp", "avfvs"],
+        "image": "/img/percorsi_divergenti.jpg",
+        "body": "Essere stranieri e autistici nelle nostre città spesso costituisce un vulnus multifattoriale rispetto all’ accesso ai servizi e alle opportunità sociali ed educative. Alle barriere linguistiche o di linguaggio, di comunicazione, spesso si associano carenze di informazione e orientamento, pregiudizio o stigma di carattere culturale e una difficile conseguente emersione dei bisogni.\nIl partenariato di progetto — [Fondazione di Comunità Porta Palazzo](https://www.fondazioneportapalazzo.org/) in partenariato con [Educadora Onlus](https://www.facebook.com/educadora.onlus/), Il Campanile ETS, [AIA APS](https://www.facebook.com/Aiaapstorino/), [ACFIL APS](https://www.facebook.com/acfiltorinopiemonte/), [Zhisong APS](https://zhisong.org/), Gruppo Asperger Piemonte APS, [ANGSA Torino](https://www.angsatorino.org/), Sumisura APS — vuole *costruire reti sociali competenti e rendere più accessibili gli spazi di comunità*.\nIl progetto si rivolge a famiglie straniere con persone nello spettro autistico che vivono nei quartieri Aurora e Barriera di Milano e interviene a partire dai luoghi che queste frequentano (le comunità di appartenenza) e da alcuni spazi di prossimità, per facilitare e accompagnare l’accesso ai servizi preposti, sensibilizzare e informare, favorire l’incontro e il mutuo aiuto tra famiglie con bisogni analoghi e associazioni di advocacy, creare rete tra servizi.\nLe attività che il progetto metterà in campo, vedranno:\n- Momenti formativi rivolti a operatori e volontari degli spazi e degli sportelli di prossimità che uniranno aspetti di conoscenza dell’autismo e dei servizi con un approccio antropologico specifico;\n- Azioni di prossimità volte a migliorare l’accessibilità degli spazi (Cecchi Point, Via Baltea, Yalla, ACFIL, Zhisong) in termini di capacitazione dei contesti;\n- potenziamento degli sportelli di orientamento, informazione e accompagnamento ai servizi per le famiglie;\n- sensibilizzazione nelle scuole e luoghi dei quartieri;\n- gruppi facilitati di auto mutuo aiuto per le famiglie;\n- sperimentazione di modelli di supporto per favorire l’inserimento e la partecipazione ai centri estivi di Cecchi Point, ACFIL APS, Zhisong APS, Yalla Aurora di bambini autistici stranieri.\n@[Guarda il video](https://youtu.be/zwuKHMSlpS8?si=YHqbZdpLNzrEdgdo)\n> Il progetto è finanziato dal bando “Piano Inclusione Sociale del Comune di Torino. Avviso pubblico di coprogettazione di interventi da realizzarsi mediante le risorse del fondo Regionale destinate alle persone con disturbo dello spettro autistico”, capofila Fondazione di Comunità Porta Palazzo in partenariato con Educadora Onlus, Il Campanile ETS, AIA APS, ACFIL APS, Zhisong APS, Gruppo Asperger Piemonte APS, ANGSA Torino OdV, Sumisura APS."
+    },
+    {
+        "title": "Risorsa Genitori",
+        "subtitle": null,
+        "expire": "2023-10-2",
+        "partners": ["cgp"],
+        "image": "/docs/risorsa/23-24/copertina.png",
+        "body": "In collaborazione con Fondazione Time2, riparte il nostro gruppo di confronto, scambio e sostegno reciproco per genitori di bambini, bambine e giovani nello spettro autistico.\nIl gruppo sarà composto da una quindicina di partecipanti che, assieme alla psicologa e psicoterapeuta esperta in autismo Erika Borroz, si incontreranno ogni due settimane, da ottobre a giugno, presso la sede di Fondazione Time2, in corso Stati Uniti 62.\nFacciamo ripartire il gruppo: siamo Risorsa!\n@[Avviso completo](/docs/risorsa/23-24/risorsa-genitori.pdf)"
+    },
+    {
+        "title": "Il Lato Positivo",
+        "subtitle": "Parent training da remoto",
+        "expire": "2023-04-12",
+        "partners": ["t2"],
+        "image": "/img/lato-positivo.jpeg",
+        "body": "Un parent training con una formulazione innovativa: nasce da un'idea di Giuliaparla e Gruppo Asperger Lazio e coinvolge anche le associazioni di Piemonte, Campania, Abruzzo e Friuli Venezia Giulia.\n- Possono iscriversi tuttə a prescindere da diagnosi, ruoli, età, genere, livelli, provenienza geografica (purché soci)\n- Ha come focus l'autovalutazione della qualità della vita e come obiettivo quello che ogni partecipante vorrà darsi.\n- Senza giudizi né soluzioni scontate.\nSi terrà il Venerdì dalle ore 17 alle ore 19 su piattaforma Zoom, il cui link verrà inviato ai partecipanti prima dell'inizio dell'attività. Per poter partecipare è necessario essere soci di Gruppo Asperger Piemonte. Per info e iscrizioni contattaci!\n@[Vedi il flyer](/docs/lato-positivo.pdf)"
+    },
+    {
+        "title": "ASPIEBICERIN",
+        "subtitle": "Spazi di sperimentazione comunitaria della neurodiversità",
+        "expire": "2023-04-19",
+        "partners": ["cgp", "vb", "t2"],
+        "image": "/img/aspieO2_19-aprile.png",
+        "body": "Il progetto prevede attività volte a sperimentare modalità di modifica e abilitazione dei contesti perché diventino capaci di cogliere e accogliere le differenze, non interpretandone i \"bisogni\", ma costruendo insieme il Cambiamento. Siamo ormai consapevoli del fatto che non solo è importante che le persone nello spettro autistico siano in grado di decodificare le modalità neurotipiche, ma che è ancora più urgente che i contesti si abilitino a comprendere quelle neurodivergenti: lo sforzo deve essere ripartito, collettivo e corale.\nLe attività previste sono:\n+ Formazione del personale di Via Baltea (a cura di Giuliaparla): per cambiare bisogna conoscere\n+ Studio congiunto con i partecipanti al progetto degli spazi perché possano diventare maggiormente accoglienti e fruibili\n+ Co-costruzione con i partecipanti al progetto di eventi culturali perché rispondano alle esigenze del più largo pubblico possibile\n+ Co-costruzione delle attività di storytelling (social e radio) con i partecipanti al progetto\nVi aspettiamo il 19 aprile alle ore 17.00 sul Lido Pedonale di Via Baltea, 3 a Torino per un aperi-talk in puro stile baltico in cui vi presentiamo ASPIEBICERIN - Spazi di sperimentazione comunitaria della neurodiversità: il nuovo progetto dedicato all'accessibilità!\nSul nostro consueto divano si alterneranno ai microfoni:\n- l'Aspiegang\n- Enrico Valtellina: filosofo, docente e saggista, esperto in autism e disability studies\n- Samuele Pigoni: direttore di Fondazione time2, filosofo e counselor\n- Federica Costigliola: psicologa e psicoterapeuta di Giuliaparla onlus\n- Maria Chiara Guerra: architetta, responsabile di progetti di ricerca applicata in rigenerazione urbana e sviluppo di comunità - Sumisura."
+    },
+    {
+        "title": "Traghettare dalla scuola al lavoro",
+        "subtitle": null,
+        "expire": "2023-04-02",
+        "partners": ["angsa"],
+        "image": "/img/locandina_2_aprile.jpg",
+        "body": "In occasione della Giornata Mondiale della Consapevolezza sull’Autismo (WAAD 2023), [ANGSA Torino](https://www.angsatorino.org/), Gruppo Asperger Piemonte, AttivitAbile, Gruppo Asperger Onlus, e Neuropeculiar, con il Patrocinio della Città Metropolitana di Torino, organizzano domenica 2 Aprile dalle 14.30 alle 17.30, l’evento _Traghettare dalla scuola al lavoro_.\nIn apertura, la presentazione de _Ad Ampio Spettro_ ed. LEM di Claudio Ughetto. Interverranno: Claudio Ughetto, Fabrizio Acanfora, Roberto Mastropasqua, Tiziana Naimo e Alice Sodi. Moderano: Raffaella Fusaro, Arianna Porzi e Stefania Goffi.\nL’evento si terrà presso Cascina Fossata, in Via Fossata n. 123 a Torino. L’ingresso è gratuito, fino ad esaurimento posti, previa registrazione al [presente link](https://forms.gle/5XToefYoAzL1MVfQ6).\nPer eventuali informazioni: (da lunedì a venerdì con orario 10-12 e 14-16) segreteria Gruppo Asperger Piemonte, oppure: [info@angsatorino.org](mailto:info@angsatorino.org). Vi aspettiamo numerosi!\n@[Vedi locandina](/img/LOCANDINA_2_APRILE.jpg)"
+    },
+    {
+        "title": "Camminata dell’Amicizia in Azzurro",
+        "subtitle": "Edizione V",
+        "expire": "2023-03-26",
+        "partners": ["avfvs"],
+        "image": "/img/locandina-camminata-amicizia-fronte.jpeg",
+        "body": "Vi aspettiamo domenica 26 Marzo 2023 presso il Parco Rosa Luxemburg a Buttigliera Alta (TO) per la V Edizione della Camminata dell’Amicizia in Azzurro! Una camminata aperta a tutti per scoprire i paesaggi della collina morenica, ma soprattutto un'occasione per ritrovarci e stare insieme.\nIl ricavato sarà devoluto interamente al Gruppo Asperger Piemonte per i nostri progetti inclusivi e le nostre attività di supporto per ragazzi, giovani e adulti e per le loro famiglie.\nSperando in una calorosa e numerosa partecipazione, ringraziamo anticipatamente tutte le persone che si stanno adoperando affinché l'iniziativa possa svolgersi al meglio, in particolar modo gli organizzatori dell'Associazione Amici della Via Francigena Valle di Susa e i Comuni di Buttigliera Alta e Rosta.\nPer info: [info@avfvs.it](mailto:info@avfvs.it) o Tel [329 8336595](tel:+393298336595)<br/>Diffondete e partecipate!\n@[Fronte locandina](/img/locandina-camminata-amicizia-fronte.jpeg)[Retro locandina](/img/locandina-camminata-amicizia-retro.jpeg)"
+    },
+    {
+        "title": "Mediatori per l'Inclusione Sociale",
+        "subtitle": "L'autismo nei contesti di vita",
+        "expire": "2022-11-05",
+        "partners": null,
+        "image": null,
+        "body": " Il Gruppo Asperger Piemonte e Fondazione Ecm, biblioteca Archimede di Settimo Torinese, in collaborazione con ASL TO4, Unionenet e Cooperativa Animazione Valdocco, organizzano un percorso formativo per Mediatori per l’Inclusione Sociale rivolto a chi lavora (operatori, educatori, volontari…) o intende lavorare con adolescenti, giovani e adulti con autismo.\nL'obiettivo è fornire strumenti, metodologie e consigli pratici per affiancare le persone con autismo nei loro contesti di vita al fine di favorire l’apprendimento in situazione, il raggiungimento di abilità relazionali e di autonomia.\nIl corso si terrà prevalentemente on line e prevede un costo per la partecipazione di 80€. È necessario effettuare la pre-iscrizione compilando il modulo online entro il 5 novembre 2022.\nAgli insegnanti sarà rilasciato l'attestato di partecipazione riconosciuto dal MIUR secondo la normativa vigente.\n@[Vedi il flyer](/docs/Mediatori_inclusione.pdf)"
+    },
+    {
+        "title": "Aspie Gang 2022-2023",
+        "subtitle": "Autismo, socialità e consapevolezza",
+        "expire": "2022-11-05",
+        "partners": ["cgp"],
+        "image": "/docs/aspie-gang/22-23/immagine.jpeg",
+        "body": "Anche quest'anno avvieremo un progetto di educazione alla socialità e alla consapevolezza, rivolto ad adolescenti e adulti con autismo.\nFaremo attività di gruppo nei contesti naturali, mediate da giovani professionisti, che a loro volta saranno orientati e supervisionati dallo staff della [Cooperativa Giuliaparla](https://www.giuliaparla.it/).\nIl progetto prevede anche il coinvolgimento delle famiglie e una valutazione condivisa con i caregiver (genitori e operatori) per individualizzare i piani di intervento.\nTrovate tutte le informazioni sul flyer. Per iscrizioni o ulteriori informazioni: [giuliaparla@gmail.com](mailto:giuliaparla@gmail.com).\n@[Vedi il flyer](/docs/aspie-gang/22-23/flyer.pdf)"
+    },
+    {
+        "title": "Autismo al femminile",
+        "subtitle": null,
+        "expire": "2022-09-15",
+        "partners": null,
+        "image": "/img/locandina_autismo_al_femminile.jpeg",
+        "body": "Ad ottobre partirà il nostro progetto dedicato all’Autismo al Femminile. Sarà uno spazio di confronto e riflessione tra donne con autismo, dai 18 anni in su.\nIl percorso, finanziato totalmente dal Gruppo Asperger Piemonte, è GRATUITO per le partecipanti e prevede 10 incontri a distanza condotti da psicologhe esperte di autismo. Gli incontri avranno cadenza quindicinale, il giovedì dalle 17 alle 18.30.\nLa richiesta di iscrizione deve pervenire entro il 15 settembre a: [comunicazione@​gruppoaspergerpiemonte.it](comunicazione@gruppoaspergerpiemonte.it)\nQualora le richieste di iscrizione dovessero essere troppo numerose, verrà fatta una selezione sulla base di colloqui motivazionali e verrà data la priorità alle donne provenienti dal Piemonte. "
+    },
+    {
+        "title": "Camminata dell'amicizia in azzurro ",
+        "subtitle": "Edizione IV",
+        "expire": "2022-03-27",
+        "partners": ["avfvs"],
+        "image": null,
+        "body": "Annunciamo l'apertura delle iscrizioni per la IV edizione della Camminata in Azzurro che si terrà il 27/03/2022 nella suggestiva natura che circonda il lago Baronis di Trana. L'iscrizione è di 10 Euro a persona, ed è aperta a chiunque. Per info e iscrizioni online potete scrivere a [info@avfvs.it](mailto:info@avfvs.it) o telefonare al [329 8336595](+393298336595).\nLa raccolta fondi sarà devoluta interamente per i progetti del Gruppo Asperger Piemonte, pertanto siete caldamente invitati a partecipare e a diffondere l'iniziativa in modo da raccogliere più adesioni possibili! Sperando in una calorosa e numerosa partecipazione, ringraziamo anticipatamente tutte le persone che si stanno adoperando affinché l'iniziativa possa svolgersi al meglio, in particolar modo gli organizzatori dell'Associazione Amici della Via Francigena Valle di Susa e del Circolo di Pesca Lago Baronis di Trana.\n@[Vedi locandina](/docs/Locandina%20Camminata%2027-03-2022.jpg)"
     }
 ]
