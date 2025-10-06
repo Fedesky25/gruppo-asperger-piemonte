@@ -108,14 +108,14 @@ a {
     letter-spacing: 0.05ch;
 }
 
-p {
-    margin-bottom: 1em;
+p:not(:first-child) {
+    margin-top: 1em;
 }
 
 ul,
 ol {
-    padding-left: 3ch;
-    margin-bottom: 1em;
+    padding-left: 2ch;
+    margin-top: 0.5em;
 }
 ul.spaced li + li,
 ol.spaced li + li {
@@ -134,7 +134,7 @@ main {
 }
 
 section {
-    scroll-margin-block-start: 4rem;
+    scroll-margin-block-start: 15vh;
     position: relative;
     margin-top: 25vh;
 }
