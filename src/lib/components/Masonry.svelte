@@ -53,6 +53,10 @@
         refresh_request = null;
     }
 
+    function request_refresh() {
+        if (!refresh_request) refresh_request = setTimeout(refresh_layout, 20);
+    }
+
     $effect(() => {
         wrapper && items.length && refresh_layout();
     });
@@ -62,14 +66,10 @@
     });
 </script>
 
-<svelte:window
-    onresize={() => {
-        if (!refresh_request) refresh_request = setTimeout(refresh_layout, 10);
-    }}
-/>
+<svelte:window onresize={request_refresh} />
 
 <div class="grid" bind:this={ghost}></div>
-<div class="grid" bind:this={wrapper}>
+<div class="grid" bind:this={wrapper} onload={request_refresh}>
     {#each items as it, idx (key === null ? idx : it[key])}
         <div class="item" data-index={idx}>
             {@render children(it, idx)}
