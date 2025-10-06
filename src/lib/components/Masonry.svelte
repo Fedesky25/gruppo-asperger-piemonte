@@ -11,6 +11,7 @@
     let ghost: HTMLDivElement;
     let wrapper: HTMLDivElement;
     let refresh_request: number | null = null;
+    let old_ncols = 0;
 
     function argmin(arr: number[]) {
         const N = arr.length;
@@ -31,13 +32,7 @@
         const ncols =
             getComputedStyle(ghost).gridTemplateColumns.split(" ").length;
 
-        if (ncols == 1) {
-            wrapper.style.gridAutoRows = "auto";
-            wrapper.style.paddingBottom = "0";
-            for (const child of wrapper.children) {
-                (child as HTMLDivElement).style.marginTop = "0px";
-            }
-        } else {
+        if (ncols > 1) {
             const offsets = new Array<number>(ncols).fill(0);
             for (const _child of wrapper.children) {
                 const child = _child as HTMLDivElement;
@@ -49,7 +44,15 @@
             }
             wrapper.style.gridAutoRows = "0px";
             wrapper.style.paddingBottom = `${Math.max(...offsets)}px`;
+        } else if (old_ncols != 1) {
+            wrapper.style.gridAutoRows = "auto";
+            wrapper.style.paddingBottom = "0";
+            for (const child of wrapper.children) {
+                (child as HTMLDivElement).style.marginTop = "0px";
+                (child as HTMLDivElement).style.gridColumn = "1";
+            }
         }
+        old_ncols = ncols;
         refresh_request = null;
     }
 
