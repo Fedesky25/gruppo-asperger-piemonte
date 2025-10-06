@@ -78,9 +78,8 @@
 </div>
 
 <style>
-    .wrapper {
+    .grid {
         display: grid;
-        grid-auto-rows: 0px;
         grid-template-columns: repeat(
             auto-fill,
             minmax(var(--col-width, 40ch), 1fr)
