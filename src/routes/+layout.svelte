@@ -116,10 +116,10 @@
         </a>
         <nav>
             <ul class="desktop-nav">
-                <li><a href="#a">Chi siamo</a></li>
-                <li><a href="#a">Attività</a></li>
-                <li><a href="#a">Sostienici</a></li>
-                <li><a href="#a">Contattaci</a></li>
+                <li><a href="/#conosciamoci">Chi siamo</a></li>
+                <li><a href="/#attivita">Attività</a></li>
+                <li><a href="/#sostienici">Sostienici</a></li>
+                <li><a href="/#contattaci">Contattaci</a></li>
             </ul>
         </nav>
     </div>
