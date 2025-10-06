@@ -105,6 +105,9 @@
 </script>
 
 <div class="card">
+    {#if image}
+        <img src={image} alt={title} />
+    {/if}
     <h3>{title}</h3>
     {#if subtitle}
         <span class="subtitle">{subtitle}</span>
@@ -121,10 +124,19 @@
         box-shadow: 0 0 1em #0001;
         background-color: #fafafa77;
     }
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 7px;
+    }
     h3 {
         padding-left: 0.7rem;
         position: relative;
         margin-bottom: 0;
+    }
+    h3:not(:first-child) {
+        margin-top: 1rem;
     }
     h3::before {
         content: "";
