@@ -190,10 +190,6 @@
         height: 2.2em;
         width: auto;
     }
-    .desktop-nav {
-        list-style: none;
-        display: flex;
-    }
     .desktop-nav li {
         margin-right: 1.4ch;
     }
@@ -208,7 +204,9 @@
         color: rgb(var(--rosso));
     }
     nav ul {
-        margin-bottom: 0;
+        list-style: none;
+        display: flex;
+        margin-top: 0;
     }
 
     .content {
