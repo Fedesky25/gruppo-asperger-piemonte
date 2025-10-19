@@ -5,6 +5,8 @@
     import BackLogo from "$lib/components/BackLogo.svelte";
     import { onDestroy } from "svelte";
 
+    import { afterNavigate } from "$app/navigation";
+
     let { children } = $props();
 
     let AF_request: number | null = null;
@@ -23,6 +25,16 @@
     onDestroy(() => {
         AF_request && cancelAnimationFrame(AF_request);
     });
+
+    const mobile_nav_id = $props.id();
+    let mobile_nav_open = $state(false);
+    const close_nav = () => (mobile_nav_open = false);
+    afterNavigate(close_nav);
+
+    function onnavclick(ev: Event) {
+        const el = ev.target as HTMLElement;
+        if (el.tagName === "NAV") close_nav();
+    }
 </script>
 
 <svelte:head>
@@ -114,15 +126,40 @@
                 </g>
             </svg>
         </a>
-        <nav>
-            <ul class="desktop-nav">
+        <nav class="desktop-nav">
+            <ul>
                 <li><a href="/#conosciamoci">Chi siamo</a></li>
                 <li><a href="/#attivita">Attività</a></li>
                 <li><a href="/#sostienici">Sostienici</a></li>
                 <li><a href="/#contattaci">Contattaci</a></li>
             </ul>
         </nav>
+        <button
+            class="mobile-nav-toggle"
+            aria-label="Toggle mobile navigation"
+            aria-expanded={mobile_nav_open}
+            aria-controls={mobile_nav_id}
+            onclick={() => (mobile_nav_open = !mobile_nav_open)}
+        >
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
     </div>
+    <nav
+        id={mobile_nav_id}
+        class="mobile-nav"
+        aria-label="Mobile navigation"
+        class:hidden={!mobile_nav_open}
+        onclick={onnavclick}
+    >
+        <ul>
+            <li><a onclick={close_nav} href="/#conosciamoci">Chi siamo</a></li>
+            <li><a onclick={close_nav} href="/#attivita">Attività</a></li>
+            <li><a onclick={close_nav} href="/#sostienici">Sostienici</a></li>
+            <li><a onclick={close_nav} href="/#contattaci">Contattaci</a></li>
+        </ul>
+    </nav>
     <div class="content">
         {@render children?.()}
         <svg
@@ -162,9 +199,10 @@
     .behind {
         position: fixed;
         z-index: 1;
-        bottom: -25vh;
+        top: 25vh;
         right: 0vw;
-        width: 70vw;
+        width: max(60vw, 70vh);
+        max-width: 80vw;
         opacity: 0.25;
         filter: blur(20px) grayscale(30%);
         transform: translateY(var(--y));
@@ -172,7 +210,7 @@
     }
 
     .head {
-        z-index: 3;
+        z-index: 4;
         position: sticky;
         top: 2rem;
         display: flex;
@@ -207,6 +245,97 @@
         list-style: none;
         display: flex;
         margin-top: 0;
+    }
+
+    .mobile-nav-toggle {
+        border: none;
+        font-size: 1em;
+        height: 2.2em;
+        width: 2.2em;
+        display: grid;
+        place-items: center;
+        background: none;
+    }
+    .mobile-nav-toggle > .bar {
+        grid-row: 1;
+        grid-column: 1;
+        width: 90%;
+        height: 4px;
+        border-radius: 8px;
+        background-color: hsla(0, 0%, 0%, 0.25);
+        transition:
+            transform 0.2s ease,
+            background-color 0.2s ease;
+    }
+    .bar {
+        transform: translateX(-0.1em);
+    }
+    .bar:first-child {
+        transform: translate(0.1em, -0.8em);
+    }
+    .bar:last-child {
+        transform: translate(0.1em, 0.8em);
+    }
+    [aria-expanded="true"] > .bar {
+        background-color: transparent;
+    }
+    [aria-expanded="true"] > .bar:first-child {
+        transform: rotate(45deg);
+        background-color: rgb(var(--giallo));
+    }
+    [aria-expanded="true"] > .bar:last-child {
+        transform: rotate(-45deg);
+        background-color: rgb(var(--giallo));
+    }
+
+    .mobile-nav {
+        z-index: 3;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 98vw;
+        height: 100%;
+    }
+    .mobile-nav.hidden {
+        pointer-events: none;
+    }
+    .mobile-nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: transform 0.2s ease;
+        background-color: rgb(var(--blu));
+        box-shadow: 0 0 2em #3337;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        padding: 0 15vw 20vh 5vw;
+    }
+    .hidden ul {
+        transform: translateX(calc(100% + 2em));
+    }
+    .mobile-nav li {
+        margin: 1em 0;
+        transform-origin: right;
+        transform: rotate(-45deg);
+    }
+    .mobile-nav a {
+        color: #eee;
+        font-size: 1.3em;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 50rem) {
+        .mobile-nav,
+        .mobile-nav-toggle {
+            display: none;
+        }
+    }
+    @media (max-width: 50rem) {
+        .desktop-nav {
+            display: none;
+        }
     }
 
     .content {
