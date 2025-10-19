@@ -5,8 +5,9 @@
         key?: K | null;
         items: T[];
         children: Snippet<[T, number]>;
+        filter?: boolean[] | null;
     }
-    let { key = null, items, children }: Props = $props();
+    let { key = null, items, children, filter = null }: Props = $props();
 
     let ghost: HTMLDivElement;
     let wrapper: HTMLDivElement;
@@ -36,6 +37,7 @@
             const offsets = new Array<number>(ncols).fill(0);
             for (const _child of wrapper.children) {
                 const child = _child as HTMLDivElement;
+                if (child.classList.contains("hide")) continue;
                 const height = child.getBoundingClientRect().height;
                 const col = argmin(offsets);
                 child.style.gridColumn = (col + 1).toString();
@@ -61,6 +63,7 @@
     }
 
     $effect(() => {
+        filter;
         wrapper && items.length && refresh_layout();
     });
 
@@ -74,7 +77,8 @@
 <div class="grid" bind:this={ghost}></div>
 <div class="grid" bind:this={wrapper} onload={request_refresh}>
     {#each items as it, idx (key === null ? idx : it[key])}
-        <div class="item" data-index={idx}>
+        {@const hide = filter && !filter[idx]}
+        <div class="item" class:hide data-index={idx}>
             {@render children(it, idx)}
         </div>
     {/each}
@@ -92,5 +96,8 @@
     .item {
         align-self: start;
         padding-bottom: var(--gap, 1em);
+    }
+    .hide {
+        display: none;
     }
 </style>
