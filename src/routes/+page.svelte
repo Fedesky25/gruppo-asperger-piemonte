@@ -293,7 +293,7 @@
 
 <style>
     header {
-        height: 90vh;
+        min-height: 90vh;
     }
     h1 {
         text-align: center;
