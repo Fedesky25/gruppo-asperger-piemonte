@@ -14,10 +14,44 @@
 
 <header>
     <h1>Gruppo Asperger Piemonte</h1>
-    <p>
-        Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read
-        the documentation
-    </p>
+    <div class="header-body">
+        <img
+            src="/img/gap-attivita.png"
+            alt="Attività del Gruppo Asperger Piemonte"
+        />
+        <div>
+            <p>
+                L’Associazione Gruppo Asperger Piemonte APS, nata
+                dall’esperienza condotta sul territorio dall’associazione <a
+                    href="https://www.asperger.it/"
+                    target="_blank"
+                    rel="noreferrer">Gruppo Asperger Onlus</a
+                >
+                di cui è socia, ha come scopo la
+                <b
+                    >tutela dei diritti delle persone nello Spettro Autistico e
+                    delle loro famiglie</b
+                >. Il Gruppo Asperger Piemonte APS, secondo quanto definito nel
+                suo
+                <a href="/docs/statuto-GAP-firmato.pdf">statuto</a>, si pone
+                come obiettivo quello di sostenere la promozione delle pari
+                opportunità e delle iniziative di aiuto reciproco e di
+                inclusione sociale delle persone nello Spettro Autistico,
+                collaborando con altre realtà impegnate sugli stessi temi.
+            </p>
+            <p>
+                Per l’Associazione, il sostegno dell'autodeterminazione e
+                dell'autorappresentanza delle persone nello Spettro Autistico
+                passa attraverso l’inclusione sociale, scolastica e lavorativa,
+                fondamentale per una migliore qualità di vita.
+            </p>
+            <p>
+                Vorremmo un’associazione partecipata e plurale, capace di
+                parlare alle diverse anime, siano esse neurodivergenti o
+                neurotipiche: ti aspettiamo!
+            </p>
+        </div>
+    </div>
 </header>
 <main>
     <section id="conosciamoci">
@@ -214,9 +248,25 @@
     }
     h1 {
         text-align: center;
-        margin-top: 20vh;
+        margin-top: 15vh;
+        margin-bottom: 10vh;
         font-size: clamp(2.3rem, 5vw, 5rem);
     }
+    header img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    @media (min-width: 50rem) {
+        .header-body {
+            display: grid;
+            grid-template-columns: 4fr 5fr;
+            column-gap: 3ch;
+            max-width: 100ch;
+            margin: 0 auto;
+        }
+    }
+
     .cols {
         column-width: 60ch;
         column-gap: 3.5rem;
