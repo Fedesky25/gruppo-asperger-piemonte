@@ -119,7 +119,6 @@
     .card {
         padding: 1.3em;
         border-radius: 1.25em;
-        min-width: min(100%, 45ch);
         width: 100%;
         box-shadow: 0 0 1em #0001;
         background-color: #fafafa77;
