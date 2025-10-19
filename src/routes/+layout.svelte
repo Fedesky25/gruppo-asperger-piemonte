@@ -336,6 +336,10 @@
         .desktop-nav {
             display: none;
         }
+        .behind {
+            top: unset;
+            bottom: -10vh;
+        }
     }
 
     .content {
