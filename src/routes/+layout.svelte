@@ -151,8 +151,8 @@
         class="mobile-nav"
         aria-label="Mobile navigation"
         class:hidden={!mobile_nav_open}
-        onclick={onnavclick}
     >
+        <button onclick={close_nav} aria-hidden="true"></button>
         <ul>
             <li><a onclick={close_nav} href="/#conosciamoci">Chi siamo</a></li>
             <li><a onclick={close_nav} href="/#attivita">Attività</a></li>
@@ -293,16 +293,23 @@
         position: fixed;
         right: 0;
         top: 0;
-        width: 98vw;
+        width: 99vw;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+    .mobile-nav > button {
+        /* Nav closer */
+        background: transparent;
+        border: none;
+        display: block;
         height: 100%;
     }
     .mobile-nav.hidden {
         pointer-events: none;
     }
     .mobile-nav ul {
-        position: absolute;
-        right: 0;
-        top: 0;
         transition: transform 0.2s ease;
         background-color: rgb(var(--blu));
         box-shadow: 0 0 2em #3337;
