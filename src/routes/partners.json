@@ -29,5 +29,10 @@
         "href": "https://www.casadicarita.org/",
         "name": "Casa di Carità",
         "img": "CasaDiCarita.svg"
+    },
+    {
+        "href": "https://lassociazionedidee.it/",
+        "name": "L'Associazione di Idee Onlus",
+        "img": "AssociazioneIdee.jpeg"
     }
 ]
