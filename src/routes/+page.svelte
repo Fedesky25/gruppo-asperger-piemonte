@@ -430,27 +430,21 @@
 
     form {
         margin-top: 1rem;
+        display: grid;
+        gap: 1rem;
     }
     button {
         font-size: 1em;
     }
     @media (max-width: 110ch) {
-        form > * + * {
-            margin-top: 1.2rem;
-        }
         form button {
-            margin-left: auto;
-            margin-right: auto;
+            place-self: center;
         }
     }
     @media (min-width: 110ch) {
         form {
-            display: grid;
             grid-template-columns: 32ch 60ch;
             gap: 1.7em;
-        }
-        form .field {
-            grid-column: 1;
         }
         form textarea {
             grid-row: 1/5;
