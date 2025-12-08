@@ -1,9 +1,17 @@
 <script lang="ts">
+    import {
+        Masonry,
+        Copyable,
+        Card,
+        Field,
+        Piedmont,
+        InPlaceCarousel,
+    } from "$lib";
     import donazione from "$lib/assets/5x1000.jpg";
-    import { Masonry, Copyable, Card, Field } from "$lib";
     import partners from "./partners.json";
     import direttivo from "./direttivo.json";
     import activities from "./activities.json";
+    import carousel from "./carousel.json";
 
     let privacy_seen = $state(false);
 
@@ -34,14 +42,15 @@
     <title>Gruppo Asperger Piemonte</title>
 </svelte:head>
 
-<header>
-    <h1>Gruppo Asperger Piemonte</h1>
-    <div class="header-body">
-        <img
-            src="/img/gap-attivita.png"
-            alt="Attività del Gruppo Asperger Piemonte"
-        />
-        <div>
+<div class="screen-height">
+    <header>
+        <div class="header-img">
+            <Piedmont>
+                <InPlaceCarousel images={carousel} />
+            </Piedmont>
+        </div>
+        <h1>Gruppo Asperger Piemonte</h1>
+        <div class="header-body">
             <p>
                 L’Associazione Gruppo Asperger Piemonte APS, nata
                 dall’esperienza condotta sul territorio dall’associazione <a
@@ -73,8 +82,8 @@
                 neurotipiche: ti aspettiamo!
             </p>
         </div>
-    </div>
-</header>
+    </header>
+</div>
 <main>
     <section id="conosciamoci">
         <h2>Conosciamoci meglio</h2>
@@ -292,27 +301,45 @@
 </main>
 
 <style>
-    header {
-        min-height: 90vh;
+    .screen-height {
+        min-height: 95vh;
     }
     h1 {
         text-align: center;
-        margin-top: 15vh;
-        margin-bottom: 10vh;
+        margin-top: 3vh;
+        margin-bottom: 6vh;
         font-size: clamp(2.3rem, 5vw, 5rem);
     }
-    header img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
     @media (min-width: 50rem) {
-        .header-body {
+        .screen-height {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header {
             display: grid;
-            grid-template-columns: 4fr 5fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr;
             column-gap: 3ch;
-            max-width: 100ch;
-            margin: 0 auto;
+            row-gap: 5vh;
+            max-width: 122ch;
+        }
+        h1 {
+            text-align: left;
+            margin-bottom: 0;
+            grid-column: 1/3;
+            grid-row: 1;
+            z-index: 3;
+        }
+        .header-body {
+            grid-row: 2;
+            grid-column: 1;
+        }
+        .header-img {
+            grid-column: 2;
+            grid-row: 1/3;
+            z-index: 2;
+            align-self: center;
         }
     }
 
