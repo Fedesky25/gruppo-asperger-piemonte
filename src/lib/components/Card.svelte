@@ -14,6 +14,17 @@
 
     const block_open = ["<ol>", "<ul>"];
     const block_close = ["</ol>", "</ul>"];
+
+    function format(body: string) {
+        return body
+            .replace(
+                link_regexp,
+                '<a href="$2" target="_black" rel="noreferrer">$1</a>',
+            )
+            .replace(bold_regexp, "<b>$1</b>")
+            .replace(emph_regexp, "<em>$1</em>");
+    }
+
     function parse_body(raw: string) {
         const lines = raw.split("\n");
         let result = "";
@@ -38,11 +49,11 @@
             switch (line.charCodeAt(0)) {
                 case 43: // +
                     check(1);
-                    result += `<li>${line.slice(2)}</li>`;
+                    result += `<li>${format(line.slice(2))}</li>`;
                     break;
                 case 45: // -
                     check(2);
-                    result += `<li>${line.slice(2)}</li>`;
+                    result += `<li>${format(line.slice(2))}</li>`;
                     break;
                 case 62: // >
                     if (state) result += block_close[state - 1];
@@ -64,19 +75,12 @@
                 }
                 default:
                     if (state) result += block_close[state - 1];
-                    result += `<p>${line}</p>`;
+                    result += `<p>${format(line)}</p>`;
                     state = 0;
             }
         }
         if (state) result += block_close[state];
-
-        return result
-            .replace(
-                link_regexp,
-                '<a href="$2" target="_black" rel="noreferrer">$1</a>',
-            )
-            .replace(bold_regexp, "<b>$1</b>")
-            .replace(emph_regexp, "<em>$1</em>");
+        return result;
     }
 
     const body_html = $derived(parse_body(body));
