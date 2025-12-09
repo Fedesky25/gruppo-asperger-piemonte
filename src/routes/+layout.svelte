@@ -1,5 +1,4 @@
 <script lang="ts">
-    import favicon from "$lib/assets/favicon.svg";
     import "$lib/global.css";
 
     import BackLogo from "$lib/components/BackLogo.svelte";
@@ -36,10 +35,6 @@
         if (el.tagName === "NAV") close_nav();
     }
 </script>
-
-<svelte:head>
-    <link rel="icon" href={favicon} />
-</svelte:head>
 
 <svelte:window {onscroll} />
 
