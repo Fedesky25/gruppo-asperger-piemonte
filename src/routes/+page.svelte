@@ -194,7 +194,7 @@
                 <ul class="spaced">
                     <li>
                         Prendere visione dello
-                        <a href="/docs/Statuto-GAP-firmato.pdf" target="_blank"
+                        <a href="/docs/statuto-GAP-firmato.pdf" target="_blank"
                             >Statuto</a
                         >;
                     </li>
