@@ -134,7 +134,7 @@
     </section>
     <section id="attivita" class="activities">
         <h2>Attività ed Eventi</h2>
-        <details>
+        <details open>
             <summary class="filters">
                 <svg
                     width="800px"
