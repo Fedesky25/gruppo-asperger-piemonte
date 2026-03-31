@@ -59,7 +59,7 @@
     }
 
     function request_refresh() {
-        if (!refresh_request) refresh_request = setTimeout(refresh_layout, 20);
+        if (!refresh_request) refresh_request = setTimeout(refresh_layout, 50);
     }
 
     $effect(() => {
@@ -75,7 +75,7 @@
 <svelte:window onresize={request_refresh} />
 
 <div class="grid" bind:this={ghost}></div>
-<div class="grid" bind:this={wrapper} onload={request_refresh}>
+<div class="grid" bind:this={wrapper} onloadcapture={request_refresh}>
     {#each items as it, idx (key === null ? idx : it[key])}
         {@const hide = filter && !filter[idx]}
         <div class="item" class:hide data-index={idx}>
